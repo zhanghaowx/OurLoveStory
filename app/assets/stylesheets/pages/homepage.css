@@ -1,0 +1,235 @@
+/****************************
+ * Reset
+ ****************************/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a, a:visited, a:hover {
+    text-decoration: none;
+    outline: none;
+}
+
+img {
+    border: none;
+}
+
+/* Remove spaces between cells in table - for fullPage.js*/
+.small-left-space {
+    margin-left: 5px;
+}
+
+.small-right-space {
+    margin-right: 5px;
+}
+
+/****************************
+ * Font
+ ****************************/
+@font-face {
+    font-family: 'Open Sans Condensed';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Open Sans Cond Light'), local('OpenSans-CondensedLight'), url(http://themes.googleusercontent.com/static/fonts/opensanscondensed/v7/gk5FxslNkTTHtojXrkp-xGAzD5WKQVN4wSyA0MYYi4rr7w4p9aSvGirXi6XmeXNA.woff) format('woff');
+}
+@font-face {
+    font-family: 'Fredericka the Great';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Fredericka the Great'), local('FrederickatheGreat'), url(http://themes.googleusercontent.com/static/fonts/frederickathegreat/v3/7Es8Lxoku-e5eOZWpxw18uNtPus5Q24fzFZQPskWbXv3rGVtsTkPsbDajuO5ueQw.woff) format('woff');
+}
+
+.cover {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1999;
+    background:rgb(255,255,255);
+}
+
+/****************************
+ * Background
+ ****************************/
+.section-background {
+    height: 100%;
+    width: 100%;
+
+	/* IE10 */
+	background-image: -ms-radial-gradient(center, circle cover, #FFFFFF 0%, pink 100%);
+	/* Mozilla Firefox */
+	background-image: -moz-radial-gradient(center, circle cover, #FFFFFF 0%, pink 100%);
+	/* Opera */
+	background-image: -o-radial-gradient(center, circle cover, #FFFFFF 0%, pink 100%);
+	/* Webkit (Safari/Chrome 10) */
+	background-image: -webkit-gradient(radial, center center, 0, center center, 501, color-stop(0, #FFFFFF), color-stop(1, pink));
+	/* Webkit (Chrome 11+) */
+	background-image: -webkit-radial-gradient(center, circle cover, #FFFFFF 0%, pink 100%);
+	/* Proposed W3C Markup */
+	background-image: radial-gradient(center, circle cover, #FFFFFF 0%, pink 100%);
+	/* Ensure the html element always takes up the full height of the browser winodw */
+	min-height: 100%;
+	/* The Magic */
+	background-size: cover;
+
+    font: 14px/1.3 'Segoe UI', Arial, sans-serif;
+}
+
+@-webkit-keyframes spinAround {
+    from {
+        -webkit-transform: rotate(0deg)
+    }
+    to {
+        -webkit-transform:scale(5.0) rotate(80deg);
+    }
+}
+@-moz-keyframes spinAround {
+    from {
+        -moz-transform: rotate(0deg)
+    }
+    to {
+        -moz-transform: scale(5.0) rotate(80deg);
+    }
+}
+@keyframes spinAround {
+    from {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: scale(5.0) rotate(80deg);
+    }
+}
+
+/****************************
+ * fullpage.js
+ ****************************/
+.has-animation .backstretch img {
+    -webkit-animation: spinAround 120s linear infinite;
+    -moz-animation: spinAround 120s linear infinite;
+    animation: spinAround 120s linear infinite;
+}
+
+/****************************
+ * Content Wrapper
+ ****************************/
+.content-wrapper-center {
+	width: 675px;
+	height: 675px;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	position: absolute;
+}
+
+/****************************
+ * Disable text selection
+ ****************************/
+html {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/****************************
+ * Count down notes
+ ****************************/
+#countdown {
+    font: 40px/1.5 'Open Sans Condensed',sans-serif;
+}
+
+.countdown-note {
+    width:500px;
+    margin:0 auto;
+    font: 40px/1.5 'Open Sans Condensed',sans-serif;
+    color: #54a6de;
+    text-align:center;
+    letter-spacing: -1px;
+}
+.countdown-note2 {
+    text-align: center;
+    font: 20px/1.5 'Open Sans Condensed', sans-serif;
+}
+
+/****************************
+ * Love Heart
+ ****************************/
+.love_heart_container {
+	margin: auto;
+	width: 670px; /**
+	 * same as love heart
+	 */
+	height: 170px; /**
+	 * so that count down notes can
+	 * stay inside love heart
+	 */
+}
+
+.love_heart {
+	width: 670px;
+	height: 625px;
+}
+
+/****************************
+ Wheel Menu
+ ****************************/
+.multi-button {
+	margin-top: 25px;
+	cursor: pointer;
+}
+
+.wheel-button,
+.wheel-button:visited,
+.item a {
+    height: 64px;
+    width: 64px;
+}
+
+.wheel-button, .wheel-button:visited {
+    background-image: url('../../assets/menu-icons/promotion.png');
+    margin: auto;
+    display: block;
+}
+
+.item > .timeline {
+	background-image: url('../../assets/menu-icons/video.png');
+}
+
+.item > .calendar {
+    background-image: url('../../assets/menu-icons/calendar.png');
+}
+
+.item > .gallery {
+    background-image: url('../../assets/menu-icons/camera.png');
+}
+
+.item > .location {
+    background-image: url('../../assets/menu-icons/map_blue.png');
+}
+
+.item > .user {
+    background-image: url('../../assets/menu-icons/user.png');
+}
+
+.item > .chat {
+    background-image: url('../../assets/menu-icons/comment.png');
+}
+
+/****************************
+ * Second Page
+ ****************************/
+.poem p {
+    font-family: "Fredericka the Great", sans-serif;
+    font-size: 35px;
+    margin: 0 auto;
+    width: 100%;
+    text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
+    text-align: center;
+}

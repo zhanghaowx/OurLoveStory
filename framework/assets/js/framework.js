@@ -1,0 +1,10 @@
+//= require jquery
+//= require jquery-ui
+//= require bootstrap
+//= require pace
+//= require breakpoints/breakpoints
+//= require jquery-blockui/jquery.blockui
+//= require jquery-unveil/jquery.unveil
+//= require jquery-sidr/jquery.sidr
+//= require jquery-numberAnimate/jquery.animateNumbers.js
+//= require jquery-slimscroll/jquery.slimscroll
