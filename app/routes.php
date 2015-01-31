@@ -15,8 +15,3 @@ Route::get('/', function()
 {
 	return View::make('site.homepage');
 });
-
-Route::get('/demo', function()
-{
-    return View::make('demo');
-});

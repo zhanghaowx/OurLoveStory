@@ -41,7 +41,6 @@
 					addBloom(-angle);
 				}
 				angle = angle + settings.jump;
-				console.debug(angle);
 			}, 100 / settings.speed);
 
 			garden.render();
