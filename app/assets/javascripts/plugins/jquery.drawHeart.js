@@ -54,7 +54,7 @@
 		function createBloom(angle) {
 			var t = Math.degToRad(angle);
 
-			var positionX = (settings.size - 0.5) * (16 * Math.pow(Math.sin(t), 3));
+			var positionX = (settings.size) * (16 * Math.pow(Math.sin(t), 3));
 			var positionY = -settings.size * (13 * Math.cos(t) - 5 * Math.cos(2 * t) - 2 * Math.cos(3 * t) - Math.cos(4 * t));
 
 			var pos = new Vector2(positionX, positionY);
@@ -84,7 +84,6 @@
 		}
 	}
 
-
 	/**
 	 * If current browser supports HTML5
 	 * @returns {boolean}
@@ -97,9 +96,17 @@
 		if (!support_canvas()) {
 			this.innerHTML = "Your browser doesn't support HTML5! Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
 		} else {
-			var canvas = this.find("canvas")[0];
-			canvas.width = this.width();
-			canvas.height = this.height();
+			var canvas = $(this).get(0);
+			canvas.width = $(window).width();
+			canvas.height = $(window).height();
+
+			// Decide canvas position
+			$(canvas).css("top", "0");
+			$(canvas).css("left", "0");
+			$(canvas).css("right", "0");
+			$(canvas).css("down", "0");
+			$(canvas).css("position", "fixed");
+
 
 			var heart = new LoveHeart(canvas, options);
 			heart.startAnimation();
@@ -109,8 +116,9 @@
 
 /**
  * The following code comes from flower power by mhepekka
+ * Refactored by Hao Zhang
  */
-
+Math = Math || {};
 Math.randomFloat = function (min, max) {
 	return Math.random() * (max - min) + min;
 };

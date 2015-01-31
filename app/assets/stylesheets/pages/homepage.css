@@ -106,7 +106,7 @@ img {
 /****************************
  * fullpage.js
  ****************************/
-.has-animation .backstretch img {
+.has-animation img {
     -webkit-animation: spinAround 120s linear infinite;
     -moz-animation: spinAround 120s linear infinite;
     animation: spinAround 120s linear infinite;
@@ -116,14 +116,7 @@ img {
  * Content Wrapper
  ****************************/
 .content-wrapper-center {
-	width: 675px;
-	height: 675px;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	margin: auto;
-	position: absolute;
+    position: relative;
 }
 
 /****************************
@@ -156,70 +149,6 @@ html {
 .countdown-note2 {
     text-align: center;
     font: 20px/1.5 'Open Sans Condensed', sans-serif;
-}
-
-/****************************
- * Love Heart
- ****************************/
-.love_heart_container {
-	margin: auto;
-	width: 670px; /**
-	 * same as love heart
-	 */
-	height: 170px; /**
-	 * so that count down notes can
-	 * stay inside love heart
-	 */
-}
-
-.love_heart {
-	width: 670px;
-	height: 625px;
-}
-
-/****************************
- Wheel Menu
- ****************************/
-.multi-button {
-	margin-top: 25px;
-	cursor: pointer;
-}
-
-.wheel-button,
-.wheel-button:visited,
-.item a {
-    height: 64px;
-    width: 64px;
-}
-
-.wheel-button, .wheel-button:visited {
-    background-image: url('../../assets/menu-icons/promotion.png');
-    margin: auto;
-    display: block;
-}
-
-.item > .timeline {
-	background-image: url('../../assets/menu-icons/video.png');
-}
-
-.item > .calendar {
-    background-image: url('../../assets/menu-icons/calendar.png');
-}
-
-.item > .gallery {
-    background-image: url('../../assets/menu-icons/camera.png');
-}
-
-.item > .location {
-    background-image: url('../../assets/menu-icons/map_blue.png');
-}
-
-.item > .user {
-    background-image: url('../../assets/menu-icons/user.png');
-}
-
-.item > .chat {
-    background-image: url('../../assets/menu-icons/comment.png');
 }
 
 /****************************

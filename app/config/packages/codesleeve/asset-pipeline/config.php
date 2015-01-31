@@ -51,12 +51,7 @@ return array(
 		'provider/assets/javascripts',
 		'provider/assets/stylesheets',
 		'provider/assets/images',
-		'provider/assets/plugins',
-        'framework/assets/js',
-        'framework/assets/plugins',
-        'framework/assets/css',
-        'framework/assets/img',
-        'framework/assets/fonts',
+		'provider/assets/plugins'
     ),
 
 	/*
