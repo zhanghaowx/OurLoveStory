@@ -139,11 +139,11 @@ html {
 }
 
 .countdown-note {
-    width:500px;
+    width: 100%;
     margin:0 auto;
     font: 40px/1.5 'Open Sans Condensed',sans-serif;
     color: #54a6de;
-    text-align:center;
+    text-align: center;
     letter-spacing: -1px;
 }
 .countdown-note2 {

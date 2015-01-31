@@ -18,7 +18,7 @@
             <p class="line2">Sun, moon and you.</p>
             <p class="line3">Sun for morning, moon for night , and you forever.</p>
         </div>
-        <div class="countdown-wrapper">
+        <div class="countdown-wrapper" style="display: none;">
             <p class="countdown-note">Ever Since We First Met:</p>
             <div id="countdown" class="countdown"></div>
             <p class="countdown-note2">I'm missing YOU every day, every minute, and every second</p>
@@ -31,13 +31,6 @@
 <script type="text/javascript">
 $(document).ready(function () {
     $.fn.fullpage();
-    $.fn.animateShow('div.poem', {
-        onComplete: function(e) {
-            $(e).fadeOut('slow');
-        }
-    }).animateShow('.countdown-wrapper', {
-        delay: 7500
-    });
     /******************
      * Countdown
      *******************/
@@ -46,13 +39,6 @@ $(document).ready(function () {
         callback: function (days, hours, minutes, seconds) {
             // add your callback function here
         }
-    });
-    /**************************
-     Love hearts
-     **************************/
-    $(".love_heart").drawHeart({
-        speed: 1,
-        jump: 3
     });
     /****************************
      * Backstretch - slideshow background
@@ -70,6 +56,26 @@ $(document).ready(function () {
  ***************************/
 Pace.on("done", function(){
     $(".cover").fadeOut(2000);
+    /**************************
+     * Show Element In Order
+     **************************/
+    $.fn.animateShow('div.poem', {
+        afterEnd: function(e) {
+            $(e).fadeOut('slow');
+        }
+    }).animateShow('.countdown-wrapper', {
+        delay: 10000,
+        beforeStart: function(e) {
+            $(e).show();
+        }
+    });
+    /**************************
+     * Love hearts
+     **************************/
+    $(".love_heart").drawHeart({
+        speed: 1,
+        jump: 3
+    });
 });
 
 </script>

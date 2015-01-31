@@ -8,7 +8,8 @@
         delay: 0,
         interval: 1500,
         animateSpeed: 5000,
-        onComplete: function(e) {},
+        beforeStart: function(e) {},
+        afterEnd: function(e) {},
     };
 
     $.fn.animateShow = function (element, options) {
@@ -19,6 +20,10 @@
             $child.css('opacity', 0);
 
             setTimeout(function(e) {
+                // if first element
+                if(i == 0) {
+                    settings.beforeStart(element);
+                }
                 e.show().css('opacity', 0).animate({
                         opacity:0.9
                     },
@@ -26,30 +31,11 @@
                     function() {
                         // if the last element
                         if(i == $children.length - 1) {
-                            settings.onComplete(element);
+                            settings.afterEnd(element);
                         }
                     });
             }, settings.interval * i + settings.delay, $child);
         });
-
-        /*
-        for(var i = 0; i < settings.elements.length; i++) {
-            var $el = $(settings.elements[i]);
-            $el.hide();
-            setTimeout(function(e) {
-                e.show().css('opacity', 0).animate({
-                        opacity:0.9
-                    },
-                    settings.animateSpeed,
-                    function() {
-                        settings.onComplete(e);
-                        // if the last element
-                        if(i == settings.elements.length) {
-                            settings.onAllComplete(settings.elements);
-                        }
-                    });
-            }, settings.delay * (i + 1), $el);
-        }*/
 
         return this;
     }
