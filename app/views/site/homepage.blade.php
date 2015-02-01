@@ -44,11 +44,11 @@ $(document).ready(function () {
      * Backstretch - slideshow background
      ***************************/
     $(".section-background").backstretch([
-        "/assets/background/1.jpg",
-        "/assets/background/2.jpg",
-        "/assets/background/3.jpg",
-        "/assets/background/4.jpg",
-        "/assets/background/5.jpg"
+        "https://farm8.staticflickr.com/7395/16233592910_daf1896a71_o.jpg",
+        "https://farm9.staticflickr.com/8674/16235088447_2898dcd187_o.jpg",
+        "https://farm8.staticflickr.com/7459/16420991725_a6c77cba4e_o.jpg",
+        "https://farm9.staticflickr.com/8627/16235088557_7f93e2fd79_o.jpg",
+        "https://farm9.staticflickr.com/8631/16235088597_53b796605e_o.jpg"
     ], {duration: 3000, fade: 750});
 });
 /****************************

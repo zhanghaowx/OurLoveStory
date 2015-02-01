@@ -11,6 +11,5 @@
 // The available directives right now are require, require_directory, and require_tree
 //
 //= require jquery
-//= require jquery-ui
 //= require pace
-//= require_directory ./plugins
+//= require_directory plugins
