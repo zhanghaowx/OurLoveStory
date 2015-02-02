@@ -12,4 +12,4 @@
 //
 //= require jquery
 //= require pace
-//= require_directory plugins
+//= require_tree plugins

@@ -43,6 +43,7 @@ return array(
 		'app/assets/javascripts',
 		'app/assets/stylesheets',
 		'app/assets/images',
+		'app/assets/media',
 		'app/assets/plugins',
 		'lib/assets/javascripts',
 		'lib/assets/stylesheets',

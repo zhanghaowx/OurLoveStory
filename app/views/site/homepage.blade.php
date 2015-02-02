@@ -25,6 +25,8 @@
         </div>
     </div>
 </div>
+<div class="background-music"></div>
+<div class="background-music-control"></div>
 <?= javascript_include_tag('application') ?>
 
 <!-- BEGIN PAGE LEVEL JS -->
@@ -50,6 +52,22 @@ $(document).ready(function () {
         "https://farm9.staticflickr.com/8627/16235088557_7f93e2fd79_o.jpg",
         "https://farm9.staticflickr.com/8631/16235088597_53b796605e_o.jpg"
     ], {duration: 3000, fade: 750});
+    /****************************
+     * Background Music Player
+     ***************************/
+    $(".background-music").jPlayer({
+        ready:function() {
+            $(this).jPlayer("setMedia", {
+                title: "Canon",
+                oga: "{{ URL::asset('assets/Pachelbel_Canon_in_D_Major_Piano_.ogg') }}",    // Support for firefox
+            });
+            $(this).jPlayer("play");
+        },
+        cssSelectorAncestor: ".background-music-control",
+        swfPath: "{{ URL::asset('assets/plugins/jplayer') }}",
+        supplied: "oga",
+    });
+    $(".background-music").jPlayer("play");
 });
 /****************************
  * Pace - Loading Progress
