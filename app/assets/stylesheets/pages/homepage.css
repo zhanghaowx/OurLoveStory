@@ -74,8 +74,6 @@ img {
 	min-height: 100%;
 	/* The Magic */
 	background-size: cover;
-
-    font: 14px/1.3 'Segoe UI', Arial, sans-serif;
 }
 
 @-webkit-keyframes spinAround {
@@ -132,31 +130,52 @@ html {
 }
 
 /****************************
- * Count down notes
+ * Count down notes && Poems
  ****************************/
-#countdown {
-    font: 40px/1.5 'Open Sans Condensed',sans-serif;
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-width: 320px)
+and (max-width: 480px) {
+    .countdown-note {
+        font-size: 30px;
+    }
+    .countdown-note2 {
+        font-size: 20px;
+    }
+    .poem p {
+        font-size: 20px;
+    }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width: 480px) {
+    .countdown-note {
+        font-size: 40px;
+    }
+    .countdown-note2 {
+        font-size: 20px;
+    }
+    .poem p {
+        font-size: 35px;
+    }
+}
+
+.countdown-wrapper > * {
+    font-family: 'Open Sans Condensed',sans-serif;
+    text-align: center;
 }
 
 .countdown-note {
     width: 100%;
     margin:0 auto;
-    font: 40px/1.5 'Open Sans Condensed',sans-serif;
-    color: #54a6de;
-    text-align: center;
+    color: #54A6DE;
     letter-spacing: -1px;
 }
-.countdown-note2 {
-    text-align: center;
-    font: 20px/1.5 'Open Sans Condensed', sans-serif;
-}
 
-/****************************
- * Second Page
- ****************************/
 .poem p {
     font-family: "Fredericka the Great", sans-serif;
-    font-size: 35px;
     margin: 0 auto;
     width: 100%;
     text-shadow: 1px 1px 0 rgba(255,255,255,0.5);

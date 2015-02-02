@@ -15,8 +15,8 @@
 		 * to use smaller jump.
 		 */
 		var defaults = {
-			speed: 1, // [1..10], creates a new bloom every 100/speed milliseconds
-			jump: 2, // [1..10] in degrees, jump 2 degrees (by default) to draw the next bloom
+			speed: 5, // [1..10], creates a new bloom every 500/speed milliseconds
+			jump: 3, // [1..10] in degrees, jump 2 degrees (by default) to draw the next bloom
 			size: 20, // [10..30]
 			mirror: true, // draw two mirror hearts
 			offset: { // adjust the position of the heart relative to the canvas
@@ -27,6 +27,13 @@
 
 		// internal variables
 		var settings = $.extend({}, defaults, options);
+		// adjustment for small screens
+		if($(window).width() < 500) {
+		    settings.size /= 2;
+		    settings.jump *= 2;
+		    settings.speed = Math.round(settings.speed / 2);
+		}
+
 		var garden = new Garden(canvas);
 		var angle = 0;
 		var blooms = [];
@@ -41,7 +48,7 @@
 					addBloom(-angle);
 				}
 				angle = angle + settings.jump;
-			}, 100 / settings.speed);
+			}, 500 / settings.speed);
 
 			garden.render();
 		};

@@ -91,10 +91,7 @@ Pace.on("done", function(){
     /**************************
      * Love hearts
      **************************/
-    $(".love_heart").drawHeart({
-        speed: 1,
-        jump: 3
-    });
+    $(".love_heart").drawHeart();
 });
 
 </script>
