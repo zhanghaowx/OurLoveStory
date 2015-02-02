@@ -59,13 +59,14 @@ $(document).ready(function () {
         ready:function() {
             $(this).jPlayer("setMedia", {
                 title: "Canon",
-                oga: "{{ URL::asset('assets/Pachelbel_Canon_in_D_Major_Piano_.ogg') }}",    // Support for firefox
+                oga: "{{ URL::asset('assets/Pachelbel_Canon_in_D_Major_Piano_.ogg') }}",    // Support for firefox & chrome
+                m4a: "{{ URL::asset('assets/Pachelbel_Canon_in_D_Major_Piano_.m4a') }}",    // Support for safari
             });
             $(this).jPlayer("play");
         },
         cssSelectorAncestor: ".background-music-control",
         swfPath: "{{ URL::asset('assets/plugins/jplayer') }}",
-        supplied: "oga",
+        supplied: "oga, m4a",
     });
     $(".background-music").jPlayer("play");
 });
