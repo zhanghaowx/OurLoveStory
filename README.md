@@ -1,5 +1,6 @@
 # OurLoveStory
 This is a redesigned version of website xiao.today, a place to keep our memories.
+![Screenshot](https://raw.githubusercontent.com/zhanghaowx/OurLoveStory/master/screenshot/screenshot.png?token=ABpHrYZj9WDmfs2PTjgmFmg0GUirhkMwks5VGjuLwA%3D%3D)
 
 ## Deploy
 ### Digital Ocean
