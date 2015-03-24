@@ -36,15 +36,10 @@ composer update
 > ```
 > to enable the mcrypt extension explicitly.
 
-6.Setup Codesleeve Asset Pipeline
-```
-php artisan config:publish codesleeve/asset-pipeline
-```
-
-7.Fix permission on folder app/storage
+6.Fix permission on folder app/storage
 ```
 sudo chown -R www-data:www-data app/storage
 sudo chmod -R 755 app/storage
 ```
 
-8.Follow [How To Set Up Apache Virtual Hosts on Ubuntu 14.04 LTS ](https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-ubuntu-14-04-lts) to finish websiate setup.
+7.Follow [How To Set Up Apache Virtual Hosts on Ubuntu 14.04 LTS ](https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-ubuntu-14-04-lts) to finish websiate setup.
