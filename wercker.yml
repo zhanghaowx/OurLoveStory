@@ -8,7 +8,7 @@ deploy:
     - create-file:
         name: write key
         filename: $PRIVATEKEY_PATH
-        content: $DIGITAL_OCEAN_KEYPAIR
+        content: $DIGITAL_OCEAN_KEYPAIR_PRIVATE
         overwrite: true
         hide-from-log: true
     - script:
