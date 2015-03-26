@@ -12,5 +12,8 @@ deploy:
         overwrite: true
         hide-from-log: true
     - script:
+        name: show private key
+        code: cat $PRIVATEKEY_PATH
+    - script:
         name: deploy website
-        code: ssh -i $PRIVATEKEY_PATH -l root -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no hao.xiao.today cd /var/www/OurLoveStory && git pull 
+        code: ssh -i $PRIVATEKEY_PATH -l root -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no hao.xiao.today 'cd /var/www/OurLoveStory && git pull'
