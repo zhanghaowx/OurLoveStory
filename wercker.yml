@@ -1,8 +1,4 @@
 box: wercker/default
-build:
-  steps:
-    - npm-install
-    - jshint
 deploy:
   steps:
     - add-to-known_hosts:
